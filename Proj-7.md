@@ -169,7 +169,36 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
       sudo systemctl status nfs-server.service
       
  ![image](https://user-images.githubusercontent.com/67065306/134593061-08a43458-c49d-482b-9faa-affbc903b24d.png)
-  
+ 
+ 
+ 9. We will export the mounts for webservers’ subnet cidr to connect as clients. For simplicity, you will install all three Web Servers inside the same subnet, 
+    but in production set up we would want to separate each tier inside its own subnet for higher level of security.
+    To check our subnet cidr – open EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
+    
+ 
+ First we make sure we set up permission that will allow our Web servers to read, write and execute files on NFS:
+
+        sudo chown -R nobody: /mnt/apps
+        
+        sudo chown -R nobody: /mnt/logs
+        
+        sudo chown -R nobody: /mnt/opts
+
+
+        sudo chmod -R 777 /mnt/apps
+        
+        sudo chmod -R 777 /mnt/logs
+        
+        sudo chmod -R 777 /mnt/opts
+
+      sudo systemctl restart nfs-server.service
+ 
+ 
+ 
+ 
+ 
+ 
+ 
       
       
 
