@@ -156,20 +156,21 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
   ![image](https://user-images.githubusercontent.com/67065306/134591599-3a476653-52ef-45af-97ff-da5896b721c0.png)
 
    
-  8. **Install NFS server, configure it to start on reboot and make sure it is u and running**
+8. **Install NFS server, configure it to start on reboot and make sure it is u and running**
+
+      sudo yum -y update 
+      
+      sudo yum install nfs-utils -y
+      
+      sudo systemctl start nfs-server.service
+      
+      sudo systemctl enable nfs-server.service
+      
+      sudo systemctl status nfs-server.service
+      
+ ![image](https://user-images.githubusercontent.com/67065306/134593061-08a43458-c49d-482b-9faa-affbc903b24d.png)
   
-  2. Based on our LVM experience from Project 6, Configure LVM on the Server.
-    
-   Instead of formating the disks as ext4 you will have to format them as xfs
-   
-   Ensure there are 3 Logical Volumes. lv-opt lv-apps, and lv-logs
-   
-   Create mount points on /mnt directory for the logical volumes as follow:
-   
-   Mount lv-apps on /mnt/apps – To be used by webservers
-   
-   Mount lv-logs on /mnt/logs – To be used by webserver logs
-   
-   Mount lv-opt on /mnt/opt – To be used by Jenkins server in Project 8
+      
+      
 
    
