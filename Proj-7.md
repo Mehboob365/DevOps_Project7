@@ -101,12 +101,25 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
   ix). Next we mount 
   
   Create mount points on /mnt directory for the logical volumes as follow:
-Mount lv-apps on /mnt/apps – To be used by webservers
-Mount lv-logs on /mnt/logs – To be used by webserver logs
-Mount lv-opt on /mnt/opt – To be used by Jenkins server in Project 8
+    
+     Mount lv-apps on /mnt/apps – (To be used by webservers)
+    
+     Mount lv-logs on /mnt/logs – (To be used by webserver logs)
+
+     Mount lv-opt on /mnt/opt – (To be used by Jenkins server in Project 8)
   
+           sudo mount /dev/vg-webdata/lv-apps /mnt/apps   
+           
+  ![image](https://user-images.githubusercontent.com/67065306/134588297-c7543c87-68fa-4536-9a34-2fc47a1cdde1.png)
+
+           sudo mount /dev/vg-webdata/lv-logs /mnt/logs
+           
+  ![image](https://user-images.githubusercontent.com/67065306/134588374-4b3050a8-7386-4c51-baf9-4e5e20fd259b.png)
   
-  
+           sudo mount /dev/vg-webdata/lv-opts /mnt/opts
+           
+  ![image](https://user-images.githubusercontent.com/67065306/134588012-9d46df52-a6d3-46f7-8f83-ce5c4ba597e7.png)
+
   
 8. 
   2. Based on our LVM experience from Project 6, Configure LVM on the Server.
