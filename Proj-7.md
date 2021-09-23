@@ -120,8 +120,36 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
            
   ![image](https://user-images.githubusercontent.com/67065306/134588012-9d46df52-a6d3-46f7-8f83-ce5c4ba597e7.png)
 
+ 
+ x. We will next run df -h to show the how they mounted.
+ 
+ ![image](https://user-images.githubusercontent.com/67065306/134588733-7a03ceb7-b79b-4e83-ab7c-7d15b26513b1.png)
+
+
+7. Next, we will Install NFS server, configure it to start on reboot and make sure it is up and running
+   For the configuration to be saved after reboot, we need to add the details to the fstab file.
+   i). We run the following to show the UUID of the devices;
   
-8. 
+      sudo blkid
+   
+ ![image](https://user-images.githubusercontent.com/67065306/134589939-7c744975-7059-4380-862c-2dc79d887c5e.png)
+
+  ii). vi /etc/fstab 
+  
+  ![image](https://user-images.githubusercontent.com/67065306/134590694-5ce5f44f-2f08-4584-8d3b-13d50ba638bd.png)
+
+ 
+ iii). Mount all filesystems (of the given types) mentioned in fstab
+ 
+         sudo mount -a
+        
+ iv) Reload daemon
+ 
+       sudo systemctl daemon-reload
+       
+  ![image](https://user-images.githubusercontent.com/67065306/134591218-dd55eebf-7280-4bd1-a8fd-f69e193ae3b3.png)
+
+  
   2. Based on our LVM experience from Project 6, Configure LVM on the Server.
     
    Instead of formating the disks as ext4 you will have to format them as xfs
