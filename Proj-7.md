@@ -71,8 +71,43 @@ Vi). To show the status of the logical volumes, will run the following;
 
 vii). Next we will create a new filesystem using the mkfs.xfs command
 
+        sudo mkfs.xfs /dev/vg-webdata/lv-apps
 
-     
+  ![image](https://user-images.githubusercontent.com/67065306/134582636-859742f0-7622-4a66-8a90-0dff02e698ee.png)
+  
+        sudo mkfs.xfs /dev/vg-webdata/lv-logs
+
+  ![image](https://user-images.githubusercontent.com/67065306/134582690-c37b8de5-711d-4213-ac1a-40df02ac2ef2.png)
+  
+        sudo mkfs.xfs /dev/vg-webdata/lv-opts
+
+  ![image](https://user-images.githubusercontent.com/67065306/134582778-2544fa1c-cfc6-4fae-9013-24c4109a31b8.png)
+
+   
+ viii). Next we will Create mount points on /mnt directory for the logical volumes as follow:
+ 
+      First we will create 3 directories;sudo mkdir /mnt/logs
+      
+          sudo mkdir /mnt/apps
+          
+          sudo mkdir /mnt/logs
+          
+          sudo mkdir /mnt/opts
+          
+   ![image](https://user-images.githubusercontent.com/67065306/134584051-707b92f1-653d-4d8a-be32-68cbb2638c1e.png)
+
+  We can see the 3 directories are owned by root.
+  
+  ix). Next we mount 
+  
+  Create mount points on /mnt directory for the logical volumes as follow:
+Mount lv-apps on /mnt/apps – To be used by webservers
+Mount lv-logs on /mnt/logs – To be used by webserver logs
+Mount lv-opt on /mnt/opt – To be used by Jenkins server in Project 8
+  
+  
+  
+  
 8. 
   2. Based on our LVM experience from Project 6, Configure LVM on the Server.
     
