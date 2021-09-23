@@ -192,9 +192,13 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
         sudo chmod -R 777 /mnt/opts
 
       sudo systemctl restart nfs-server.service
+      
+  ![image](https://user-images.githubusercontent.com/67065306/134594124-3c5c9b78-e487-4b34-98f9-bd357201e866.png)
+
  
- 
- 
+   Next we update /etc/exports file with subnet cidr.
+    
+    sudo vi /etc/exports
  
  
  
