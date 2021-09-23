@@ -171,7 +171,9 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
  ![image](https://user-images.githubusercontent.com/67065306/134593061-08a43458-c49d-482b-9faa-affbc903b24d.png)
  
  
- 9. We will export the mounts for webservers’ subnet cidr to connect as clients. For simplicity, you will install all three Web Servers inside the same subnet, 
+ 9. **We will export the mounts for webservers’ subnet cidr to connect as clients**. 
+    
+    For simplicity, you will install all three Web Servers inside the same subnet, 
     but in production set up we would want to separate each tier inside its own subnet for higher level of security.
     To check our subnet cidr – open EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
     
@@ -201,9 +203,27 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
     sudo vi /etc/exports
  
  
+ ![image](https://user-images.githubusercontent.com/67065306/134594762-8b3b1dc5-56ad-424f-ac75-cd21c3416da2.png)
+
+
+10. **We will check which port is used by NFS and open it using Security Groups (add new Inbound Rule)**
+
+    rpcinfo -p | grep nfs
+ 
+ ![image](https://user-images.githubusercontent.com/67065306/134595003-95ca2714-9160-4c46-bc82-c260b0dd10bb.png)
+
+**Important note:** In order for NFS server to be accessible from our client, we must also open following ports: 
+   
+   TCP 111
+   
+   UDP 111
+   
+   UDP 2049
+  
+ ![image](https://user-images.githubusercontent.com/67065306/134595459-3d36b8b7-79c0-496d-8bf2-4de3428e7384.png)
  
  
-      
+
       
 
    
