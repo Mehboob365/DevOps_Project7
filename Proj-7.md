@@ -319,7 +319,36 @@ Configure the Web Servers to work with a single MySQL database
  
      172.31.1.188:/mnt/apps  /var/www nfs defaults 0 0
  
+ ![image](https://user-images.githubusercontent.com/67065306/134740858-9fa220fa-d437-439e-843c-8c68e6cb1dd2.png)
+
+
+6. **install Apache**
+
+      sudo yum install httpd -y
+      
+ ![image](https://user-images.githubusercontent.com/67065306/134741222-4a9d972e-4397-4cb9-9fef-ee858223ea33.png)
  
+ Start and enable the httpd service.
+ 
+ ![image](https://user-images.githubusercontent.com/67065306/134741391-da457768-ed6b-4e61-9792-83a9bd0fafff.png)
+
+list the file, ls -l /var/www
+
+![image](https://user-images.githubusercontent.com/67065306/134742072-79e94f20-6564-4c90-bea4-564c668e9697.png)
+
+**Repeat steps 1-6 for another 2 Web Servers.**
+
+7. We will Verify that Apache files and directories are available on the Web Server in /var/www and also on the NFS server in /mnt/apps. 
+   If we see the same files – it means NFS is mounted correctly. We can try to create a new file touch test.txt from one server and check if the same file is accessible from other Web Servers.
+   
+![image](https://user-images.githubusercontent.com/67065306/134743702-7c730786-ba5b-47ca-a142-18c0cec1681c.png)
+
+
+![image](https://user-images.githubusercontent.com/67065306/134743758-1ec7a145-1990-4fa0-8851-bc9f4a8b6f6e.png)
+
+
+     
+  
  
  
  
