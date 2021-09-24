@@ -271,7 +271,12 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
 ![image](https://user-images.githubusercontent.com/67065306/134690275-f857a34b-7dde-41a4-9452-d1d1d7f5ff01.png)
 
 **4. Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr**
+
+        sudo nano /etc/mysql/mysql.conf.d/mysql.cnf    edit the bind address to 0.0.0.0
+        
+        sudo systemctl restart mysql      
  
+  ![image](https://user-images.githubusercontent.com/67065306/134695161-813e3190-9de9-4b49-acd5-5a5050cd93cf.png)
 
  
 
