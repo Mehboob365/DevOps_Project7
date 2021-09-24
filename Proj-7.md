@@ -228,13 +228,48 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
    
 Install MySQL server
 
+    sudo apt update
+    
+    sudo apt install mysql-server -y
+    
+ ![image](https://user-images.githubusercontent.com/67065306/134681335-bdd0126f-3e3a-42b8-8375-b9988174f85f.png)
+    
+    sudo systemctl start mysql
+    
+    sudo systemctl enable mysql
 
-Create a database and name it tooling
+![image](https://user-images.githubusercontent.com/67065306/134680967-0cb1446d-ca33-4000-894a-896c9ac880a5.png)
 
+   sudo systemctl status mysql
 
-Create a database user and name it webaccess
+![image](https://user-images.githubusercontent.com/67065306/134681760-96288b65-a47a-4224-b6e4-97e29debc4a9.png)
 
+**Create a database and name it tooling**
 
+    sudo mysql_secure_installation
+    
+ ![image](https://user-images.githubusercontent.com/67065306/134683153-793f26e2-d1fe-43da-9ed1-5171dfff9edd.png)
+
+   sudo mysql
+   
+   mysql> create database tooling;
+   
+   mysql> show databases;
+
+ ![image](https://user-images.githubusercontent.com/67065306/134685405-1ddc4110-4396-446c-accd-761d352235a5.png)
+
+**Create a database user and name it webaccess**
+
+      mysql> CREATE USER 'webaccess'@'%' IDENTIFIED WITH mysql_native_password BY 'M3xxxx';
+      
+      mysql> GRANT ALL PRIVILEGES ON tooling.* TO 'webaccess'@'%' WITH GRANT OPTION;
+
+      mysql> flush priviliges;
+      
+
+![image](https://user-images.githubusercontent.com/67065306/134689254-07cadeb6-6297-439f-ae88-55537e2b194c.png)
+
+      
 Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr
  
  
