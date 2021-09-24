@@ -222,6 +222,21 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
   
  ![image](https://user-images.githubusercontent.com/67065306/134595459-3d36b8b7-79c0-496d-8bf2-4de3428e7384.png)
  
+
+**STEP 2 — CONFIGURE THE DATABASE SERVER**
+   **Step 2 — Configure the database server**
+   
+Install MySQL server
+
+
+Create a database and name it tooling
+
+
+Create a database user and name it webaccess
+
+
+Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr
+ 
  
 
       
