@@ -299,7 +299,41 @@ Configure the Web Servers to work with a single MySQL database
 
 2. Install NFS client
 
-sudo yum install nfs-utils nfs4-acl-tools -y
+      sudo yum install nfs-utils nfs4-acl-tools -y
+      
+      sudo systemctl start nfs-server
+      
+      sudo systemctl enable nfs-server
+      
+      sudo systemctl status nfs-server
+      
+  ![image](https://user-images.githubusercontent.com/67065306/134740236-ad3f2fdc-007e-4b94-b84c-5c937ee727c3.png)
+  
+  3. sudo mkdir /var/www
+
+  4. sudo mount -t nfs -o rw,nosuid 172.31.1.188:/mnt/apps /var/www
+
+ ![image](https://user-images.githubusercontent.com/67065306/134740583-cef8c8dd-8c39-468e-bec5-14ce6f13d4d9.png)
+ 
+ 5. update fstab file with the entry below
+ 
+     172.31.1.188:/mnt/apps  /var/www nfs defaults 0 0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+      
+      
+      
+      
+      
 
 
 
