@@ -226,7 +226,7 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
 **STEP 2 — CONFIGURE THE DATABASE SERVER**
    **Step 2 — Configure the database server**
    
-Install MySQL server
+**1. Install MySQL server**
 
     sudo apt update
     
@@ -244,7 +244,7 @@ Install MySQL server
 
 ![image](https://user-images.githubusercontent.com/67065306/134681760-96288b65-a47a-4224-b6e4-97e29debc4a9.png)
 
-**Create a database and name it tooling**
+**2. Create a database and name it tooling**
 
     sudo mysql_secure_installation
     
@@ -258,20 +258,21 @@ Install MySQL server
 
  ![image](https://user-images.githubusercontent.com/67065306/134685405-1ddc4110-4396-446c-accd-761d352235a5.png)
 
-**Create a database user and name it webaccess**
+**3. Create a database user and name it webaccess**
 
       mysql> CREATE USER 'webaccess'@'%' IDENTIFIED WITH mysql_native_password BY 'M3xxxx';
       
       mysql> GRANT ALL PRIVILEGES ON tooling.* TO 'webaccess'@'%' WITH GRANT OPTION;
 
       mysql> flush priviliges;
-      
 
 ![image](https://user-images.githubusercontent.com/67065306/134689254-07cadeb6-6297-439f-ae88-55537e2b194c.png)
 
-      
-Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr
+![image](https://user-images.githubusercontent.com/67065306/134690275-f857a34b-7dde-41a4-9452-d1d1d7f5ff01.png)
+
+**4. Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr**
  
+
  
 
       
