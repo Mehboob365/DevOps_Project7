@@ -279,7 +279,28 @@ vii). Next we will create a new filesystem using the mkfs.xfs command
   ![image](https://user-images.githubusercontent.com/67065306/134695161-813e3190-9de9-4b49-acd5-5a5050cd93cf.png)
 
  
+**Step 3 — Prepare the Web Servers**
+   
+We need to make sure that our Web Servers can serve the same content from shared storage solutions, in our case – NFS Server and MySQL database.
+We know that one DB can be accessed for reads and writes by multiple clients. For storing shared files that our Web Servers will use – we will utilize NFS and mount previously created Logical Volume lv-apps to the folder where Apache stores files to be served to the users (/var/www).
 
-      
+This approach will make our Web Servers stateless, which means we will be able to add new ones or remove them whenever we need, and the integrity of the data (in the database and on NFS) will be preserved.
+
+During the next steps we will do following:
+
+Configure NFS client (this step must be done on all three servers)
+
+Deploy a Tooling application to our Web Servers into a shared NFS folder
+
+Configure the Web Servers to work with a single MySQL database
+
+
+1. We will Launch a new EC2 instance with RHEL 8 Operating System
+
+2. Install NFS client
+
+sudo yum install nfs-utils nfs4-acl-tools -y
+
+
 
    
