@@ -398,6 +398,10 @@ list the file, ls -l /var/www
   ![image](https://user-images.githubusercontent.com/67065306/134770558-0401d211-4cb3-4585-92a6-db584859c1fd.png)
 
 
+![image](https://user-images.githubusercontent.com/67065306/134772784-de640aa3-1ced-4d28-b3af-7b390d953421.png)
+
+![image](https://user-images.githubusercontent.com/67065306/134772802-bfc06db0-d7dd-4baa-820e-4d2280a09c89.png)
+
 
 
       Note 2: If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux sudo setenforce 0
