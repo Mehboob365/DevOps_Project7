@@ -337,17 +337,34 @@ list the file, ls -l /var/www
 ![image](https://user-images.githubusercontent.com/67065306/134742072-79e94f20-6564-4c90-bea4-564c668e9697.png)
 
 **Repeat steps 1-6 for another 2 Web Servers.**
+ 
+ This is for web2 server
+ 
+ ![image](https://user-images.githubusercontent.com/67065306/134745975-13f8c2ad-6a3e-47c0-bcb4-3c14aae4fcc4.png)
+
+ This is for web3 server
+ 
+ ![image](https://user-images.githubusercontent.com/67065306/134746029-5b163ec1-42cf-48f3-96b5-fad5b582b466.png)
+
 
 7. We will Verify that Apache files and directories are available on the Web Server in /var/www and also on the NFS server in /mnt/apps. 
    If we see the same files – it means NFS is mounted correctly. We can try to create a new file touch test.txt from one server and check if the same file is accessible from other Web Servers.
    
+    on the webserver
+   
 ![image](https://user-images.githubusercontent.com/67065306/134743702-7c730786-ba5b-47ca-a142-18c0cec1681c.png)
 
-
+    on the NFS Server 
+ 
 ![image](https://user-images.githubusercontent.com/67065306/134743758-1ec7a145-1990-4fa0-8851-bc9f4a8b6f6e.png)
 
 
-     
+8. We will Locate the log folder for Apache on the Web Server and mount it to NFS server’s export for logs. 
+   Repeat step №4 to make sure the mount point will persist after reboot.
+   
+   update vi /etc/fstab with the following entry.
+    
+       172.31.1.188:/mnt/apps /var/www nfs defaults 0 0
   
  
  
