@@ -366,9 +366,12 @@ list the file, ls -l /var/www
     
        172.31.1.188:/mnt/apps /var/www nfs defaults 0 0
   
+ 9. We will fork the tooling source code from Darey.io Github Account to our Github account.
  
+    git clone https://github.com/darey-io/tooling.git
  
- 
+  ![image](https://user-images.githubusercontent.com/67065306/134768473-a5c61c44-fef6-4b83-9ded-78836e2624ee.png)
+
  
  
 
