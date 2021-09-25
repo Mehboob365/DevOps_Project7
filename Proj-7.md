@@ -407,10 +407,17 @@ The following error was reported for the httpd daemons service.
 
 ![image](https://user-images.githubusercontent.com/67065306/134776614-5038ee05-a8b5-446d-a6cb-d26708f08d1e.png)
 
+Note 2: If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux sudo setenforce 0
+        To make this change permanent – open following config file 
+        
+        sudo vi /etc/sysconfig/selinux and set SELINUX=disabled
+        
+  ![image](https://user-images.githubusercontent.com/67065306/134785341-8dc7311a-7c7f-4215-9701-5e853af77dd8.png)
+  
+  
 
-
-      Note 2: If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux sudo setenforce 0
-              To make this change permanent – open following config file sudo vi /etc/sysconfig/selinux and set SELINUX=disabled.
+        
+ 
               
               
 
