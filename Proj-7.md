@@ -369,10 +369,21 @@ list the file, ls -l /var/www
  9. We will fork the tooling source code from Darey.io Github Account to our Github account.
  
     git clone https://github.com/darey-io/tooling.git
+    
+    On web1 server
  
-  ![image](https://user-images.githubusercontent.com/67065306/134768473-a5c61c44-fef6-4b83-9ded-78836e2624ee.png)
+ ![image](https://user-images.githubusercontent.com/67065306/134769639-ba52246b-5dc7-4da4-9927-669d8110e628.png)
 
+    On web2 server
  
+ ![image](https://user-images.githubusercontent.com/67065306/134769672-0f000aba-a116-459b-a93c-68117d2b0dbe.png)
+
+   On web3 server
+   
+ ![image](https://user-images.githubusercontent.com/67065306/134769696-12b2c12b-d2ad-47f4-8777-0898d4229a76.png)
+ 
+
+ 10. 
  
 
 
