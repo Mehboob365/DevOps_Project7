@@ -373,6 +373,10 @@ list the file, ls -l /var/www
     On web1 server
  
  ![image](https://user-images.githubusercontent.com/67065306/134769639-ba52246b-5dc7-4da4-9927-669d8110e628.png)
+ 
+ This is what is in the tooling directory.
+ 
+ ![image](https://user-images.githubusercontent.com/67065306/134769928-a79a3b50-3dcf-429b-85ed-7e4032d34230.png)
 
     On web2 server
  
@@ -383,11 +387,23 @@ list the file, ls -l /var/www
  ![image](https://user-images.githubusercontent.com/67065306/134769696-12b2c12b-d2ad-47f4-8777-0898d4229a76.png)
  
 
- 10. 
+ 10. Deploy the tooling website’s code to the Webserver. Ensure that the html folder from the repository is deployed to /var/www/html
  
+      Note 1: Do not forget to open TCP port 80 on the Web Server.
+      
+  ![image](https://user-images.githubusercontent.com/67065306/134770513-f9b99ed2-372f-490a-94db-6d7b0f0fcce1.png)
+
+  ![image](https://user-images.githubusercontent.com/67065306/134770541-9c8d2b28-d221-4d0c-a46a-738e58ce0f73.png)
+  
+  ![image](https://user-images.githubusercontent.com/67065306/134770558-0401d211-4cb3-4585-92a6-db584859c1fd.png)
 
 
 
+
+      Note 2: If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux sudo setenforce 0
+              To make this change permanent – open following config file sudo vi /etc/sysconfig/selinux and set SELINUX=disabled.
+              
+              
 
       
       
