@@ -415,6 +415,17 @@ Note 2: If you encounter 403 Error – check permissions to your /var/www/html f
   ![image](https://user-images.githubusercontent.com/67065306/134785341-8dc7311a-7c7f-4215-9701-5e853af77dd8.png)
   
   
+ ![image](https://user-images.githubusercontent.com/67065306/134785400-11760270-da00-4df7-a130-5574796c8677.png)
+ 
+ 
+ 11. Update the website’s configuration to connect to the database (in functions.php file). 
+     
+        We will apply tooling-db.sql script
+       
+ 
+ 
+ 
+ 12. Will create in MySQL a new admin user with username: myuser and password: password:
 
         
  
