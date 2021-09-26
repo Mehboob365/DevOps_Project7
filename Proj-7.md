@@ -421,17 +421,19 @@ Note 2: If you encounter 403 Error – check permissions to your /var/www/html f
  11. Update the website’s configuration to connect to the database (in functions.php file). 
      
         We will apply tooling-db.sql script
-       
+      
  
- 
- 
- 12. Will create in MySQL a new admin user with username: myuser and password: password:
+ 12. Have created create in MySQL a new admin user with username: myuser and password: password:
 
         
- 
+ 13. We open the website in our browser http://<Web-Server-Public-IP-Address-or-Public-DNS-Name>/index.php and make sure we can login into the websute with myuser user.
               
               
+![image](https://user-images.githubusercontent.com/67065306/134825248-6bc93f86-e096-4b98-9339-874000f1c309.png)
 
+![image](https://user-images.githubusercontent.com/67065306/134825543-a56a4844-5ac1-401f-8998-5800dfe78563.png)
+
+ 
       
       
       
